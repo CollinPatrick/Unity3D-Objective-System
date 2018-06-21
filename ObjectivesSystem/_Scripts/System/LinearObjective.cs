@@ -14,7 +14,7 @@ public class LinearObjective : Objective {
         {
             Vector3 temp = objectToInteract.transform.position;
             temp += new Vector3(0, objectToInteract.GetComponent<MeshFilter>().sharedMesh.bounds.size.y / 2 + objectToInteract.transform.localScale.y / 2, 0);
-            Gizmos.DrawLine(transform.position, temp + Vector3.up);
+            Gizmos.DrawLine(transform.position, temp);
             Gizmos.DrawCube(temp, new Vector3(0.25f,0.25f,0.25f));
         }
         if (objectiveType == ObjectiveType.Destination)

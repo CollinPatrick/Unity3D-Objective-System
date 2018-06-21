@@ -1469,7 +1469,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveName: First Steps
-  description: Find the red cube.
+  description: 'Find the red cube.
+
+    Select it with the ''E'' key.'
   status: 0
   processesOnCompletion: 02000000
   objectiveType: 0
