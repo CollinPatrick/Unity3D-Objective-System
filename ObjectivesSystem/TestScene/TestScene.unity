@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveName: Multi Objective One
-  description: 
+  description: Interact with the blue cubes then enter the blue zone.
   status: 0
   processesOnCompletion: 02000000
   objectiveType: 0
@@ -464,7 +464,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 20
-    m_Alignment: 2
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -516,7 +516,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 728729924}
-  - {fileID: 574099671}
   m_Father: {fileID: 2104949634}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -790,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2a81e0ae2fb60428be017e68ae2dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: {fileID: 687182056}
+  objective: {fileID: 0}
 --- !u!65 &571404772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -858,48 +857,6 @@ Transform:
   m_Father: {fileID: 1891621783}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1 &574099670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 574099671}
-  - component: {fileID: 574099672}
-  m_Layer: 0
-  m_Name: ObjectiveTree
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &574099671
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 574099670}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -731.3829, y: -287.1348, z: -21.324654}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 687182057}
-  m_Father: {fileID: 280429061}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &574099672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 574099670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8eacf179c64e3f4297cc109def2ba28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  treeName: Second Tree
 --- !u!1 &641969011
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,54 +955,6 @@ Transform:
   m_Father: {fileID: 1891621783}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &687182056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 687182057}
-  - component: {fileID: 687182058}
-  m_Layer: 0
-  m_Name: LinearObjective
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &687182057
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 687182056}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.99, y: 8, z: 18.92}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 574099671}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &687182058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 687182056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29bb619b17154244d93b982a6c7e4a88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectiveName: Another Tree!
-  description: Find the red cube.
-  status: 0
-  processesOnCompletion: 02000000
-  objectiveType: 0
-  objectToInteract: {fileID: 571404770}
-  destinationToReach: {fileID: 0}
-  nextObjective: {fileID: 0}
 --- !u!1 &710315257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,7 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveName: Choice Objective One
-  description: 
+  description: Pick your favorite yellow cube.
   status: 0
   processesOnCompletion: 02000000
   objectiveType: 0
@@ -2787,7 +2696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1446952404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4007,7 +3916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveName: Branching Objective
-  description: 
+  description: Just pick one.
   status: 0
   processesOnCompletion: 
   objectiveType: 0
